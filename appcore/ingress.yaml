@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: appcore
   annotations:
-    traefik.ingress.kubernetes.io/router.pathmatcher: "/"
+    traefik.ingress.kubernetes.io/router.middlewares: appcore-aplicacion-replacepath@kubernetescrd
   labels:
     name: appcore
 spec:
