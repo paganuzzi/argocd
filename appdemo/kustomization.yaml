@@ -1,5 +1,6 @@
-namespace: appdemov3
+namespace: appdemo
 resources:
 - namespace.yaml
 - deployment.yaml
 - service.yaml
+- ingress.yaml
