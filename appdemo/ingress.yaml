@@ -4,6 +4,8 @@ metadata:
   name: appdemo
   labels:
     name: appdemo
+  annotations:
+    traefik.ingress.kubernetes.io/router.middlewares: appcore-aplicacion-replacepath@kubernetescrd
 spec:
   rules:
   - host: cluster.local
