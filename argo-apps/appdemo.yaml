@@ -3,8 +3,12 @@ kind: Application
 metadata:
   name: appdemo
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=true
 spec:
   project: default
+  syncPolicy:
+    automated: {}
   source:
     repoURL: https://github.com/paganuzzi/argocd.git
     targetRevision: HEAD
