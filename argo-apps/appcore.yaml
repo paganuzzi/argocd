@@ -4,7 +4,7 @@ metadata:
   name: appcore
   namespace: argocd
   annotations:
-    traefik.ingress.kubernetes.io/router.pathmatcher: /
+
     notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argo
 spec:
   project: default
