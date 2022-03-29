@@ -4,8 +4,7 @@ metadata:
   name: appdemo
   namespace: argocd
   annotations:
-
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: my-channel1;my-channel2
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argo
 spec:
   project: default
   syncPolicy:

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: appdemo
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: appdemo
@@ -17,7 +17,7 @@ spec:
         image: nginx:stable-alpine
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "8Mi"
+            cpu: "50m"
         ports:
         - containerPort: 80
