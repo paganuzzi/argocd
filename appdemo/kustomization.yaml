@@ -1,4 +1,4 @@
-namespace: appdemo
+namespace: appdemov3
 resources:
 - namespace.yaml
 - deployment.yaml
