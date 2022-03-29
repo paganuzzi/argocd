@@ -1,4 +1,8 @@
 namespace: app-v1
+images:
+  - name: appdemo
+    newName: traefik/whoami
+
 resources:
 - namespace.yaml
 - deployment.yaml
