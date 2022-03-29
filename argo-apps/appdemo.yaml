@@ -4,11 +4,14 @@ metadata:
   name: appdemo
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-options: Prune=true
+
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: my-channel1;my-channel2
 spec:
   project: default
   syncPolicy:
-    automated: {}
+    automated: 
+      prune: true
+      selfHeal: true
   source:
     repoURL: https://github.com/paganuzzi/argocd.git
     targetRevision: HEAD
