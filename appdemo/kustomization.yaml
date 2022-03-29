@@ -1,4 +1,4 @@
-namespace: appdemo
+namespace: app-v1
 resources:
 - namespace.yaml
 - deployment.yaml
