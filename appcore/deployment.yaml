@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appdemo
+  name: appcore
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appdemo
+      app: appcore
   template:
     metadata:
       labels:
-        app: appdemo
+        app: appcore
     spec:
       containers:
-      - name: appdemo
+      - name: appcore
         image: nginx:stable-alpine
         resources:
           limits:
