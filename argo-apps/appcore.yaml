@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appcore
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argo
+spec:
+  project: default
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+  source:
+    repoURL: https://github.com/paganuzzi/argocd.git
+    targetRevision: HEAD
+    path: appcore
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: appcore

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appdemo
+  template:
+    metadata:
+      labels:
+        app: appdemo
+    spec:
+      containers:
+      - name: appdemo
+        image: nginx:stable-alpine
+        resources:
+          limits:
+            memory: "8Mi"
+            cpu: "50m"
+        ports:
+        - containerPort: 80
