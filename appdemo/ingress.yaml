@@ -16,5 +16,5 @@ spec:
         backend:
           service:
             name: appdemo
-            port: 
+            port:
               number: 80
